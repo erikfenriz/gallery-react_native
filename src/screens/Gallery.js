@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {View, Image, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
+import {Image, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
 import withLoader from '../HOC/withLoader';
 
 const Gallery = ({imageList, navigation}) => {
@@ -21,6 +21,7 @@ const Gallery = ({imageList, navigation}) => {
                     </TouchableOpacity>
                 }
                 keyExtractor={(result) => result.id}
+                showsVerticalScrollIndicator={false}
             />
     );
 };
